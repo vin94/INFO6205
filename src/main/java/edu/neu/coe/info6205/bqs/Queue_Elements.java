@@ -16,26 +16,15 @@ public class Queue_Elements<Item> implements Queue<Item> {
      * @param item the item to add
      */
     public void enqueue( Item item) {
-        Element<Item> element = new Element<>(item);
-        Element<Item> secondNewest = newest;
-        if (isEmpty()) oldest = element;
-        else {
-            assert secondNewest != null; // Redundant Check
-            secondNewest.next = element;
-        }
-        this.newest = element;
+        // TODO
     }
 
     public
     Item dequeue() {
         if (isEmpty()) return null;
         else {
-            assert oldest != null; // Redundant assertion
-             Item result = oldest.item;
-             Element<Item> secondOldest = oldest.next;
-            oldest = secondOldest;
-            if (isEmpty()) newest = null;
-            return result;
+            // TODO
+            return null;
         }
     }
 

@@ -57,9 +57,8 @@ public class Bag_Array<Item> implements Bag<Item> {
      * @param size the size of the new array
      */
     private static <T> T[] growFrom( T[] from, int size) {
-        @SuppressWarnings("unchecked") T[] result = (T[]) new Object[size];
-        System.arraycopy(from, 0, result, 0, from.length);
-        return result;
+        // TODO
+        return null;
     }
 
     private Item[] items = null;
