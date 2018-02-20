@@ -69,4 +69,22 @@ public class RandomWalkTest {
         pmt.invokePrivate("move",-2,0);
         assertEquals(0.0, rw.distance(), 1.0E-7);
     }
+
+    /**
+     */
+    @Test
+    public void testRandomWalk(){
+        for(int i = 0; i < 5000; i++){
+            RandomWalk rw = new RandomWalk();
+            assertEquals(rw.randomMoveServalTimes(100,100), 10, 3);
+        }
+    }
+
+    @Test
+    public void testRandomWalk2() {
+        for (int i = 0; i < 5000; i++) {
+            RandomWalk rw = new RandomWalk();
+            assertNotSame(0, rw.randomMoveServalTimes(1, 1));
+        }
+    }
 }

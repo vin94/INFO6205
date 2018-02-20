@@ -73,7 +73,7 @@ public class WQUPCTest {
     public void testFind4() {
         WQUPC h = new WQUPC(10);
         h.union(0,1);
-        h.union(0,2);
+        h.union(1,2);
         h.union(3,4);
         h.union(3,5);
         assertEquals(0, h.find(0));
