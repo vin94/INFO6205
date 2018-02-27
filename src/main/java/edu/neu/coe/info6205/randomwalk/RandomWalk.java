@@ -29,10 +29,16 @@ public class RandomWalk {
         return 0; // TODO you need to implement this
     }
 
-    public static void main(String[] args) {
-        int n = Integer.parseInt(args[0]);
-        RandomWalk walk = new RandomWalk();
-        walk.randomWalk(n);
-        System.out.println(n + " steps: " + walk.distance());
+
+    public double randomMoveServalTimes(int sn, int dn) {
+        int n = sn;  // Number of steps for single drunkard
+        int m = dn;  // Number of drunkard
+        double totalDistance = 0;
+        for (int i = 0; i < m; i++){
+            RandomWalk walk = new RandomWalk();
+            walk.randomWalk(n);
+            totalDistance = totalDistance + walk.distance();
+        }
+        return totalDistance/m ;
     }
 }
