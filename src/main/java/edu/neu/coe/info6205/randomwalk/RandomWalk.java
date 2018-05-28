@@ -16,8 +16,12 @@ public class RandomWalk {
         // TODO you need to implement this
     }
 
-    private void randomWalk(int n) {
-        for (int i = 0; i < n; i++)
+    /**
+     * Perform a random walk of m steps
+     * @param m the number of steps the drunkard takes
+     */
+    private void randomWalk(int m) {
+        for (int i = 0; i < m; i++)
             randomMove();
     }
 
