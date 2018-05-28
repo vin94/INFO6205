@@ -29,10 +29,13 @@ public class RandomWalk {
         return 0; // TODO you need to implement this
     }
 
-
-    public double randomMoveServalTimes(int sn, int dn) {
-        int n = sn;  // Number of steps for single drunkard
-        int m = dn;  // Number of drunkard
+    /**
+     * Perform multiple random walk experiments, returning the mean distance.
+     * @param n the number of experiments to run
+     * @param m the number of steps for each experiment
+     * @return the mean distance
+     */
+    public double randomWalkMulti(int n, int m) {
         double totalDistance = 0;
         for (int i = 0; i < m; i++){
             RandomWalk walk = new RandomWalk();
