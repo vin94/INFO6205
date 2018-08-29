@@ -3,6 +3,10 @@ package edu.neu.coe.info6205.sort.par;
 import java.util.Arrays;
 import java.util.concurrent.CompletableFuture;
 
+/**
+ * This code has been fleshed out by Ziyao Qiao. Thanks very much.
+ * TODO tidy it up a bit.
+ */
 class ParSort {
 
     public static int cutoff = 1000;

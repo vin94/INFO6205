@@ -10,6 +10,9 @@ import edu.neu.coe.info6205.equable.Equable;
 import java.util.ArrayList;
 import java.util.Collection;
 
+/**
+ * This class serves as a test harness for Equable.
+ */
 public class Tuple extends BaseEquable {
 
     public Tuple(int x, double y) {

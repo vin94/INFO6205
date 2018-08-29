@@ -45,6 +45,7 @@ public class WQUPCTest {
 
     /**
      */
+    @SuppressWarnings("Duplicates")
     @Test
     public void testFind3() {
         WQUPC h = new WQUPC(10);
@@ -68,12 +69,14 @@ public class WQUPCTest {
     }
 
     /**
+     * TODO this appears to be identical to testFind3. What's going on here?
      */
+    @SuppressWarnings("Duplicates")
     @Test
     public void testFind4() {
         WQUPC h = new WQUPC(10);
         h.union(0,1);
-        h.union(1,2);
+        h.union(0,2);
         h.union(3,4);
         h.union(3,5);
         assertEquals(0, h.find(0));

@@ -4,17 +4,14 @@
 
 package edu.neu.coe.info6205.sort.hashCode;
 
-import edu.neu.coe.info6205.equable.ComparableEquable;
 import org.junit.Test;
 
-import java.time.Instant;
 import java.util.ArrayList;
-import java.util.Collection;
-import java.util.Date;
 import java.util.List;
 
 import static org.junit.Assert.*;
 
+@SuppressWarnings("ALL")
 public class HashCodeSortTest {
     public class Date implements Comparable<Date>{
         private final int year;
@@ -61,8 +58,7 @@ public class HashCodeSortTest {
             if (hour != date.hour) return false;
             if (min != date.min) return false;
             if (sec != date.sec) return false;
-            if (millis != date.millis) return false;
-            return true;
+            return millis == date.millis;
         }
 
         @Override
