@@ -84,9 +84,10 @@ public class HashCodeSortTest {
             return 0;
         }
     }
+
     @Test
     public void sort() throws Exception {
-        final Date d1 = new Date(2017, 12, 10, 11, 30, 05, 723);
+        final Date d1 = new Date(2017, 12, 10, 11, 30, 5, 723);
         final Date d2 = new Date(2017, 12, 10, 11, 38, 17, 42);
         final Date d3 = new Date(2017, 12, 10, 11, 38, 17, 47);
         assertTrue(d1.hashCode()<d2.hashCode());
