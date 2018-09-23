@@ -16,17 +16,10 @@ public class RandomWalk {
         // TODO you need to implement this
     }
 
-    /**
-     * Perform a random walk of m steps
-     * @param m the number of steps the drunkard takes
-     */
-    private void randomWalk(int m) {
-        for (int i = 0; i < m; i++)
-            randomMove();
     }
 
-    private void randomMove() {
-        // TODO you need to implement this
+    public void randomWalk(int n) {
+        // TODO perform n moves
     }
 
     public double distance() {

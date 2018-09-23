@@ -12,18 +12,12 @@ public class LinkedList<Item> implements Iterable<Item> {
         Element<Item> tail = head;
         head = new Element<>(item, tail);
     }
+public interface LinkedList<Item> extends Iterable<Item> {
+    void add(Item item);
 
-    public Item remove() throws BQSException {
-        if (head == null) throw new BQSException("collection is empty");
-        Item result = head.item;
-        head = head.next;
-        return result;
-    }
+    Item remove() throws BQSException;
 
-    public Item getHead() {
-        //noinspection ConstantConditions
-        return isEmpty() ? null : head.item;
-    }
+    Item getHead();
 
     public boolean isEmpty() {
         return head == null;
@@ -50,4 +44,5 @@ public class LinkedList<Item> implements Iterable<Item> {
     public String toString() {
         return asArrayList().toString();
     }
+    boolean isEmpty();
 }

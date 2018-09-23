@@ -86,6 +86,28 @@ public class UF_HWQUPC implements UF {
         // ... end of TODO
     }
 
+    // validate that p is a valid index
+    private void validate(int p) {
+        int n = parent.length;
+        if (p < 0 || p >= n) {
+            throw new IllegalArgumentException("index " + p + " is not between 0 and " + (n-1));
+        }
+    }
+
+    /**
+     * Returns true if the the two sites are in the same component.
+     *
+     * @param  p the integer representing one site
+     * @param  q the integer representing the other site
+     * @return {@code true} if the two sites {@code p} and {@code q} are in the same component;
+     *         {@code false} otherwise
+     * @throws IllegalArgumentException unless
+     *         both {@code 0 <= p < n} and {@code 0 <= q < n}
+     */
+    public boolean connected(int p, int q) {
+        return find(p) == find(q);
+    }
+
     /**
      * Merges the component containing site {@code p} with the
      * the component containing site {@code q}.

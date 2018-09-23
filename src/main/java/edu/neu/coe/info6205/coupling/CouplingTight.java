@@ -1,23 +1,22 @@
 package edu.neu.coe.info6205.coupling;
 
-public class CouplingNone {
+public class CouplingTight {
 
     class A {
-        public A(int a) { this.a = a; }
+        public A(int a) { CouplingTight.this.a = a; }
         public int getA() { return a; }
-
-        private final int a;
     }
 
     class B {
-        public B(int b) { this.b = b; }
+        public B(int b) { CouplingTight.this.b = b; }
         public int getB() { return b; }
-
-        private final int b;
     }
 
+    private int a;
+    private int b;
+
     public static void main(String[] args) {
-        CouplingNone c = new CouplingNone();
+        CouplingTight c = new CouplingTight();
         A a = c.new A(0);
         int x = a.getA();
         B b = c.new B(1);
