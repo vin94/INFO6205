@@ -8,6 +8,7 @@ import edu.neu.coe.info6205.sort.simple.InsertionSort;
 import edu.neu.coe.info6205.sort.simple.SelectionSort;
 import edu.neu.coe.info6205.sort.simple.Sort;
 
+import java.util.Random;
 import java.util.function.Function;
 
 public class Benchmark<T> {

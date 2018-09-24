@@ -16,8 +16,6 @@ public class RandomWalk {
         // TODO you need to implement this
     }
 
-    }
-
     public void randomWalk(int n) {
         // TODO perform n moves
     }

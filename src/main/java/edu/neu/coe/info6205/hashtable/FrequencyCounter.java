@@ -6,12 +6,23 @@ package edu.neu.coe.info6205.hashtable;
 
 import java.util.HashMap;
 
-public class FrequencyCounter {
+public class FrequencyCounter<K> {
 
-    private final ST<String,Integer> map;
+    private final ST<K,Integer> map;
 
-    public FrequencyCounter(ST<String,Integer> map) {
+    public FrequencyCounter(ST<K,Integer> map) {
         this.map = map;
+    }
+
+    public FrequencyCounter() {
+        this(new STMap<>(new HashMap<>()));
+    }
+
+    public int get(Object key) {
+        //noinspection unchecked
+        Integer value = map.get((K)key);
+        if (value==null) value = 0;
+        return value;
     }
 
     public void increment(String s) {
@@ -23,7 +34,7 @@ public class FrequencyCounter {
     }
 
     public static void main(String[] args) {
-        FrequencyCounter counter = new FrequencyCounter(new STMap<>(new HashMap<>()));
+        FrequencyCounter<String> counter = new FrequencyCounter<>();
 
         for (String arg: args) counter.increment(arg);
 
