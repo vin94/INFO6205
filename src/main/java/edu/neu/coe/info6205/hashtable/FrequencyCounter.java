@@ -8,8 +8,6 @@ import java.util.HashMap;
 
 public class FrequencyCounter<K> {
 
-    private final ST<K, Integer> map;
-
     public FrequencyCounter(ST<K, Integer> map) {
         this.map = map;
     }
