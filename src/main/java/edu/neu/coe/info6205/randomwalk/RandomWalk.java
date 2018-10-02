@@ -24,6 +24,8 @@ public class RandomWalk {
 
     public void randomWalk(int n) {
         // TODO perform n moves
+    }
+
     /**
      * Private method to generate a random move according to the rules of the situation.
      * That's to say, moves can be (+-1, 0) or (0, +-1).
