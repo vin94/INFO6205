@@ -67,10 +67,10 @@ public class ShellSort<X extends Comparable<X>> implements Sort<X> {
                         return 0;
                     case 2:
                         // TODO
-                        return h;
+                        return 0;
                     case 3:
                         // TODO
-                        return h;
+                        return 0;
                     default:
                         throw new RuntimeException("invalid m value: " + m);
                 }
