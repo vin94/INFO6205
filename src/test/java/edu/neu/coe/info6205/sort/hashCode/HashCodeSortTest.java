@@ -9,11 +9,12 @@ import org.junit.Test;
 import java.util.ArrayList;
 import java.util.List;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
 
 @SuppressWarnings("ALL")
 public class HashCodeSortTest {
-    public class Date implements Comparable<Date>{
+    public class Date implements Comparable<Date> {
         private final int year;
         private final int month;
         private final int day;
@@ -77,8 +78,8 @@ public class HashCodeSortTest {
         public int compareTo(Date o) {
             int[] thisArray = new int[]{year, month, day, hour, min, sec, millis};
             int[] thatArray = new int[]{o.year, o.month, o.day, o.hour, o.min, o.sec, o.millis};
-            for (int i = 0; i<thisArray.length; i++) {
-                int cf = Integer.compare(thisArray[i],thatArray[i]);
+            for (int i = 0; i < thisArray.length; i++) {
+                int cf = Integer.compare(thisArray[i], thatArray[i]);
                 if (cf != 0) return cf;
             }
             return 0;
@@ -90,11 +91,11 @@ public class HashCodeSortTest {
         final Date d1 = new Date(2017, 12, 10, 11, 30, 5, 723);
         final Date d2 = new Date(2017, 12, 10, 11, 38, 17, 42);
         final Date d3 = new Date(2017, 12, 10, 11, 38, 17, 47);
-        assertTrue(d1.hashCode()<d2.hashCode());
-        assertTrue(d3.hashCode()==d2.hashCode());
-        assertTrue(d1.compareTo(d2)<0);
-        assertTrue(d2.compareTo(d3)<0);
-        assertTrue(d1.compareTo(d3)<0);
+        assertTrue(d1.hashCode() < d2.hashCode());
+        assertTrue(d3.hashCode() == d2.hashCode());
+        assertTrue(d1.compareTo(d2) < 0);
+        assertTrue(d2.compareTo(d3) < 0);
+        assertTrue(d1.compareTo(d3) < 0);
 
         final HashCodeSort sorter = new HashCodeSort();
         final List<Date> dates = new ArrayList<>();
